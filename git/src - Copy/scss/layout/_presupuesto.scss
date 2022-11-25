@@ -1,0 +1,86 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.tabla{
+    background: rgb(1,42,97);
+    background: linear-gradient(0deg, rgba(1,42,97,1) 0%, rgba(4,119,10,1) 100%);
+    height: 100%;
+    margin: 7rem 0;
+    font-weight: bold;
+
+    .table{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        height: 5rem;
+
+        .color{
+            background-color: v.$azulClaro;
+        }
+
+        .color-t{
+            background-color: #1E5128;
+        }
+        
+        p,input[type="number"] {
+            background-color: transparent;
+            font-size: 1.4rem;
+            color: v.$blanco;
+            font-family: v.$fuente_texto;
+            width: 12rem;
+            border-color: v.$blanco;
+            border-width: 0.1rem;
+            text-align: center;
+            font-weight: bold;
+            
+        }
+    p{
+        display: flex;
+        border: 1px solid;
+        font-size: 1.3rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        margin: 0;
+        }
+    }
+}
+
+.ingreso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        color: v.$blanco;
+        font-size: 2rem;
+    }
+    
+    .campo{
+        height: 3rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        text-align: center;
+        margin-right: 1rem;
+        text-decoration: none;
+    }
+
+    .boton{
+        text-align: center;
+        @include m.boton{
+            color: v.$gris;
+            height: 3rem;
+            font-size: 1.5rem;
+            @include m.tablet {
+                width: 10rem;
+            }
+        }
+        &:hover{
+            color: v.$gris;
+            cursor: pointer;
+        }
+    }
+}
+

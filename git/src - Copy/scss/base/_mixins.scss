@@ -1,0 +1,39 @@
+@use 'variables' as v;
+
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) { 
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) { 
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) { 
+        @content;
+    }
+}
+
+@mixin boton {
+    background-color: v.$verde;
+    color: v.$negro;
+    border-radius: 1rem;
+    text-decoration: none;
+    // text-align: center;
+    border: none;
+    height: 5rem;
+    margin: 0%;
+    font-weight: bold;
+    font-size: 2rem;
+    @content;
+}
